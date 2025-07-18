@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Payment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="payment-container">
+        <h2>🔐 Secure Payment</h2>
+
+        <div class="user-details">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <span class="error-message" id="nameError"></span>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" placeholder="Enter your phone" required>
+            <span class="error-message" id="phoneError"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <span class="error-message" id="emailError"></span>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            <span class="error-message" id="dateError"></span>
+        </div>
+
+        <div class="payment-options">
+            <div class="payment-option" onclick="showDetails('card')">💳 Credit/Debit Card</div>
+            <div class="payment-option" onclick="showDetails('netbanking')">🏦 Net Banking</div>
+            <div class="payment-option" onclick="showDetails('wallet')">📱 Digital Wallet</div>
+        </div>
+
+        <div id="payment-details" class="payment-details"></div>
+
+        <input type="hidden" id="selectedPaymentMethod">
+
+        <div class="buttons">
+            <button class="pay-button" id="pay-button" onclick="submitPayment()" disabled>💰 Proceed to Pay</button>
+            <button class="back-button" onclick="resetForm()">🔙 Back</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

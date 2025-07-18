@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Fairfield by Marriott Sriperumbudur",
+        "location": "Sriperumbudur",
+        "image": "img/Sriperumbudur.jpg",
+        "description": "A luxury stay in Sriperumbudur, offering world-class hospitality and amenities.",
+        "amenities": ["Swimming Pool", "Gym", "Fine Dining", "Free Parking"],
+        "lat": 12.9681,
+        "lng": 79.9391
+    },
+    {
+        "name": "Hotel Park Elanza",
+        "location": "Coimbatore",
+        "image": "img/park elanza.jpg",
+        "description": "A business-class hotel with all modern facilities, located in the heart of Coimbatore.",
+        "amenities": ["Banquet Hall", "Business Lounge", "Spa", "Conference Room"],
+        "lat": 11.0055,
+        "lng": 76.9641
+    },
+    {
+        "name": "CTS Residency",
+        "location": "Trichy",
+        "image": "img/cts residency.jpg",
+        "description": "A budget-friendly hotel in Trichy, offering a comfortable stay with essential services.",
+        "amenities": ["Budget Stay", "Car Rental", "24/7 Room Service", "Restaurant"],
+        "lat": 10.7905,
+        "lng": 78.7047
+    },
+    {
+        "name": "IKON by Annapoorna",
+        "location": "RS Puram",
+        "image": "img/IKON.jpg",
+        "description": "A boutique hotel in RS Puram, offering a fine dining experience and comfortable stay.",
+        "amenities": ["Restaurant", "Cafe", "Business Center", "Luxury Rooms"],
+        "lat": 11.0127,
+        "lng": 76.9651
+    },
+    {
+        "name": "Itsy Hotels Kurinji Stay Inn",
+        "location": "Yelagiri",
+        "image": "img/yelagiri.jpg",
+        "description": "A hilltop stay in Yelagiri, providing the best views of nature and adventure activities.",
+        "amenities": ["Paragliding", "Boating", "Trekking", "Campfire"],
+        "lat": 12.5802,
+        "lng": 78.6394
+    },
+    {
+        "name": "Hotel NT Grand",
+        "location": "Yercaud",
+        "image": "img/yercaud.jpg",
+        "description": "A stylish hotel in Yercaud, offering a blend of luxury and nature experiences.",
+        "amenities": ["Forest View", "Trekking", "Luxury Spa", "Private Balcony"],
+        "lat": 11.7753,
+        "lng": 78.2093
+    },
+    {
+        "name": "TIO (The Indian Origin) Hotels",
+        "location": "Yercaud",
+        "image": "img/yercaud2.webp",
+        "description": "A culturally themed hotel in Yercaud, offering a mix of Indian heritage and luxury.",
+        "amenities": ["Cultural Events", "Yoga Sessions", "Traditional Cuisines", "Garden View"],
+        "lat": 11.7753,
+        "lng": 78.2093
+    },
+    {
+        "name": "Zacs Valley Resort",
+        "location": "Kodaikanal",
+        "image": "img/zacs valley resort.webp",
+        "description": "A valley-side resort in Kodaikanal, offering a premium getaway experience.",
+        "amenities": ["Private Cottages", "Bonfire", "Forest Trek", "24/7 Service"],
+        "lat": 10.2381,
+        "lng": 77.4892
+    }
+]

@@ -1,0 +1,67 @@
+/* Global Styling */
+
+
+/* Booking Container */
+.booking-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+h2 {
+    color: #08407b;
+    margin-bottom: 10px;
+}
+
+/* Booking Details */
+#booking-details {
+    font-size: 16px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Booking Information */
+#booking-details p {
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+/* Confirm Button */
+#confirm-booking {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+}
+
+#confirm-booking:hover {
+    background-color: #218838;
+}
+
+/* Success Message */
+.success-message {
+    color: green;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 18px;
+    margin-top: 10px;
+}

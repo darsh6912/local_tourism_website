@@ -1,0 +1,304 @@
+.row gx-0{
+padding: 10px 20px; /* Padding inside the button */
+margin: 0 10px; /* Margin between buttons */
+font-size: 16px; /* Font size */
+font-weight: bold; /* Bold text */
+text-transform: uppercase; /* Uppercase text */
+color: #ffffff; /* Text color (white) */
+ /* Button background color (blue) */
+border: none; /* Remove button border */
+border-radius: 5px; /* Rounded corners */
+cursor: pointer; /* Cursor style on hover */
+}
+.search-form {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 100px 1080px;
+  }
+  
+  input[type="search"] {
+    width: calc(100% - 40px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-right: 30px;
+  }
+  
+  label[for="search-box"] {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #13357c;
+    cursor: pointer;
+  }
+
+.menu-buttons {
+    display: flex;
+    justify-content: center; /* Align buttons in the center */
+    margin-bottom: 20px; /* Add some space below the buttons */
+  }
+  
+  /* Style for each menu button */
+  .veg-btn,
+  .non-veg-btn,
+  .diverse-menu-btn {
+    padding: 10px 20px; /* Padding inside the button */
+    margin: 0 10px; /* Margin between buttons */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    color: #060606; /* Text color (white) */
+    border: none; /* Remove button border */
+    background-color: #ffffff;
+    border-style: groove;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor 
+    style on hover */
+  }
+  
+  /* Hover effect for menu buttons */
+  .veg-btn:hover,
+  .non-veg-btn:hover,
+  .diverse-menu-btn:hover {
+    background-color: #13357c !important; 
+    color:#ffffff
+  }
+
+  .detail-box {
+    background-color: #13357c;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Center align text */
+  }
+  
+  .detail-box h1 {
+    margin: 0;
+  }
+
+  #search-input[type="text"] {
+    padding: 6px;
+    margin-right: 10px;
+    margin-left: 1cm;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    font-size: 17px;
+    border-radius: 4px;
+  }
+  
+  #search-button {
+    padding: 6px 10px;
+    background: white;
+    color: green !important;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  #search-button i {
+    font-size: 18px;
+  }
+  
+  #search-button:hover {
+    background: rgb(39, 11, 137);
+    color: white;
+  }
+  
+  .image-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Adjust the gap between images */
+    padding: 10px 20px; /* Padding inside the button */
+margin: 0 55px; /* Margin between buttons */
+align-items: center;
+}
+
+.image-item {
+  flex: 1 0 calc(33.33% - 5px); /* Three images per row */
+  margin-bottom: 5px; /* Adjust the margin between rows */
+  position: relative;
+  overflow: hidden;
+}
+
+.image-item img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-item img:hover {
+  transform: scale(1.05); /* Scale the image slightly when hovered over */
+}
+
+.restaurant-section {
+  padding: 50px 0; /* Add padding around the section */
+}
+
+.restaurant-item {
+  margin-bottom: 30px; /* Add some space between each restaurant item */
+}
+
+.restaurant-info {
+  padding: 20px; /* Add padding inside the restaurant info box */
+  background-color: #f8f9fa; /* Light gray background color */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+.restaurant-info h3 {
+  margin-top: 0; /* Remove default margin for the heading */
+}
+
+.restaurant-info p {
+  margin: 5px 0; /* Add some space between paragraphs */
+}
+
+.rating {
+  color: #f1c40f; /* Star color */
+  font-size: 22px; /* Size of stars */
+  margin-left:48px;
+  margin-top: -33px; /* Add some space above the rating */
+}
+
+.restaurant-item img {
+  max-width: 350px; /* Ensure the image doesn't exceed its container */
+  height: 250px; /* Maintain the aspect ratio of the image */
+  border-radius: 5px; /* Add rounded corners to the image */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the image */
+  transition: transform 0.3s ease;
+}
+
+.restaurant-item img:hover {
+  transform: scale(1.05); /* Scale the image slightly when hovered over */
+}
+.btn-primary{
+  background-color: #13357c;
+  border-color: #13357c;
+}
+.btnn.btn-primary {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #13357c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btnn.btn-primary:hover {
+  background-color: #13357c !important;
+  color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  padding: 25px 15px;
+  color: black !important;
+  overflow: hidden;
+  font-size: 17px;
+  font-weight: 400;
+  outline: none;
+  transition: .5s;
+  z-index: 1;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  background-color: #13357c;
+    color: #f9fafd !important;
+}
+
+
+
+.navbar-light .navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #13357c;
+  z-index: -1;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::after {
+  transform: translateY(0);
+}
+
+
+.navbar-light .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #13357c;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::after {
+  transform: translateY(0);
+}
+
+
+.container-fluid .navbar
+{
+ background-color: #ffffff;
+} 
+.nav-item:hover{
+ background-color: #13357c;
+ color:#fff;
+}
+#wishlist:hover,
+#more_res:hover{
+ background-color: #fff;
+ color:#13357c;
+ font-weight:500;
+ border-color: #13357c;
+ border-width: 100%;
+}
+
+
+.footer {
+  background: var(--bs-dark);
+}
+.footer .footer-item a {
+  line-height: 30px;
+  color: var(--bs-white);
+  transition: 0.5s;
+  text-decoration: none !important;
+}
+
+.footer .footer-item a:hover {
+  letter-spacing: 2px;
+  color: #13357c;
+}
+
+.mx-1:hover{
+  background-color: #ffffff !important;
+  color:#13357c !important;
+}
+/* Footer End */
+
+/* copyright Start */
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bs-dark) !important;
+}
+
+.bg-primary {
+  --bs-bg-opacity: 1;
+  background-color:#13357c !important;
+}

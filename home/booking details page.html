@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Booking Form</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0f3658; /* Light background color */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+    header {
+        background-color: #122b60(8, 84, 120, 0.9); /* Darker header background */
+        color: white;
+        padding: 40px 20px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        position: relative;
+    }
+    .booking-details {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .booking-details h1 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 700;
+    }
+    .booking-details p {
+        font-size: 18px;
+        color: #e0e0e0;
+        margin: 10px 0 0;
+    }
+    form {
+        background-color: white; /* White background for the form */
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        max-width: 700px;
+        width: 100%;
+        margin: 20px auto;
+        position: relative;
+    }
+    label {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        color: #333;
+    }
+    label i {
+        margin-right: 10px;
+        color: #13357c;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="number"],
+    textarea,
+    select {
+        width: calc(100% - 22px);
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="date"]:focus,
+    input[type="number"]:focus,
+    textarea:focus,
+    select:focus {
+        border-color: #13357c;
+        outline: none;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: #13357c; /* Button background */
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #13357c;
+    }
+    button:disabled {
+        background-color: #c3e6cb;
+        cursor: not-allowed;
+    }
+    /* Modal Styles */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; 
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; 
+        max-width: 500px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .modal-header, .modal-footer {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    .modal-footer {
+        border-top: 1px solid #ddd;
+        text-align: right;
+    }
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<header>
+    <div class="booking-details">
+        <h1>Booking Details</h1>
+        <p>Please fill out the form below to complete your booking. Ensure all fields are filled out correctly.</p>
+    </div>
+</header>
+<main>
+    <form id="bookingForm">
+        <label for="firstName">
+            <i class="fas fa-user"></i> First Name:
+        </label>
+        <input type="text" id="firstName" name="firstName" required>
+        
+        <label for="lastName">
+            <i class="fas fa-user"></i> Last Name:
+        </label>
+        <input type="text" id="lastName" name="lastName" required>
+        
+        <label for="email">
+            <i class="fas fa-envelope"></i> E-mail:
+        </label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">
+            <i class="fas fa-phone"></i> Phone Number:
+        </label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="departureDate">
+            <i class="fas fa-calendar-day"></i> Departure Date:
+        </label>
+        <input type="date" id="departureDate" name="departureDate" required>
+        
+        <label for="returnDate">
+            <i class="fas fa-calendar-alt"></i> Return Date:
+        </label>
+        <input type="date" id="returnDate" name="returnDate" required>
+        
+        <label for="pickupAddress">
+            <i class="fas fa-map-marker-alt"></i> Pickup Address:
+        </label>
+        <input type="text" id="pickupAddress" name="pickupAddress" required>
+        
+        <label for="dropAddress">
+            <i class="fas fa-map-marker-alt"></i> Drop Address:
+        </label>
+        <input type="text" id="dropAddress" name="dropAddress" required>
+        
+        <label for="vehicleType">
+            <i class="fas fa-car"></i> Vehicle Type:
+        </label>
+        <select id="vehicleType" name="vehicleType">
+            <option value="">Please Select</option>
+            <option value="car">Car</option>
+            <option value="largeCar">Large Car</option>
+            <option value="smallCoach">Small Coach</option>
+            <option value="suv">SUV</option>
+            <option value="minivan">Minivan</option>
+            <option value="luxuryCar">Luxury Car</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="bicycle">Bicycle</option>
+        </select>
+        
+        <label for="passengers">
+            <i class="fas fa-users"></i> Number of Passengers:
+        </label>
+        <input type="number" id="passengers" name="passengers" required>
+        
+        <label for="message">
+            <i class="fas fa-comment"></i> Additional Message:
+        </label>
+        <textarea id="message" name="message"></textarea>
+        
+        <label for="coupon">
+            <i class="fas fa-tag"></i> Coupon Code:
+        </label>
+        <input type="text" id="coupon" name="coupon">
+        
+        <button type="button" id="submitButton">Confirm Your Booking</button>
+    </form>
+</main>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Confirm Booking</h2>
+    </div>
+    <div class="modal-body">
+      <p>Are you sure you want to confirm your booking?</p>
+    </div>
+    <div class="modal-footer">
+      <button id="confirmBtn">Yes, Confirm</button>
+      <button id="cancelBtn">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById("submitButton").addEventListener("click", function() {
+    document.getElementById("myModal").style.display = "flex";
+});
+
+document.querySelector(".close").addEventListener("click", function() {
+    document.getElementById("myModal").style.display = "none";
+});
+
+document.getElementById("cancelBtn").addEventListener("click", function() {
+    document.getElementById("myModal").style.display = "none";
+});
+
+document.getElementById("confirmBtn").addEventListener("click", function() {
+    document.getElementById("bookingForm").submit();
+});
+
+window.onclick = function(event) {
+    if (event.target == document.getElementById("myModal")) {
+        document.getElementById("myModal").style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

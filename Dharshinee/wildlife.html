@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Tourism</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #google_translate_element {
+            margin-bottom: 20px;
+        }
+         /* Hide the Google Translate banner */
+
+         .btn-light {
+    background-color: #13357c !important; /* Button fill color */
+    color: white !important; /* Text color */
+    border: none !important; /* Remove border */
+    box-shadow: none !important; /* Remove any shadow */
+    padding: 5px 10px; /* Adjust padding */
+    margin: 0; /* Remove extra space */
+}
+
+         
+    .goog-te-banner-frame {
+        display: none !important;
+    }
+
+    /* Hide the Google Translate logo and "Powered by Google" text */
+    .goog-logo-link {
+        display: none !important;
+    }
+
+    .goog-te-gadget span {
+        display: none !important;
+    }
+
+    /* Hide the Google Translate dropdown default styling */
+    .goog-te-gadget {
+        font-size: 0px !important;
+    }
+
+    /* Style the language dropdown to make it visible */
+    .goog-te-gadget select {
+        font-size: 16px !important;
+        padding: 5px;
+    }
+    /* Hide the Google Translate top bar */
+    body > .skiptranslate {
+        display: none !important;
+    }
+
+    /* Prevent extra space from appearing */
+    body {
+        top: 0px !important;
+    }
+    </style>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="adventure.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Header-->
+    <header class="header_section">
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+            <div class="row gx-0">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0 ms-0">
+                    <!-- <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                    </div> -->
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <div class="language-container" style="position: relative; display: inline-block;">
+                            <button onclick="toggleTranslate()" class="btn btn-light" >
+                                <i class="fa fa-language me-2"></i> Languages
+                            </button>
+                        <!-- Google Translate Widget -->
+                        <div id="translate-container" style="
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            background: white;
+                            padding: 10px;
+                            border-radius: 5px;
+                            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                            z-index: 1000;
+                        ">
+                    <div id="google_translate_element"></div>
+                    </div>
+                    </div>
+    
+                    <script>
+                        function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                            { pageLanguage: 'en', includedLanguages: 'en,hi,ta' }, 
+                            'google_translate_element'
+                        );
+                    }
+    
+                    function toggleTranslate() {
+                        var translateDiv = document.getElementById("translate-container");
+                        translateDiv.style.display = (translateDiv.style.display === "none" || translateDiv.style.display === "") ? "block" : "none";
+                    }
+    
+                    // Close dropdown only if clicking outside
+                    document.addEventListener("click", function(event) {
+                    var container = document.querySelector(".language-container");
+                    var translateDiv = document.getElementById("translate-container");
+                    if (!container.contains(event.target)) {
+                        translateDiv.style.display = "none";
+                    }
+                    });
+                    </script>
+    
+                    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                        <!-- <a href="#"><small class="me-3 text-light"><i class="fa fa-volume-up me-2"></i>Audio Guide</small></a> -->
+                        <a id="logoutBtn" ><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Logout</small></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0" style="color:#13357c"><i class="fa fa-map-marker-alt me-3" style="color:#13357c"></i>LocaleQuest</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="../localeQuest/head.html" class="nav-item nav-link">Home</a>
+                        <a href="../localeQuest/head.html" class="nav-item nav-link">About</a>
+                        <a href="#front.html" class="nav-item nav-link active">Exploration</a>
+                        <a href="../localeQuest/head.html" class="nav-item nav-link">Gallery</a>
+                        <!-- <a href="contact.html" class="nav-item nav-link">Profile</a> -->
+                    </div>
+                    <a href="wishlist.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4" id="wishlist">Wishlist</a>
+                </div>
+                <div>
+                    <form action="#">
+                        <input id="search-input" type="text" placeholder="Search" name="search">
+                        <button id="search-button" type="button"> <!-- Corrected the ID and added type="button" -->
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+        <!-- Topbar End -->
+    </header>
+    
+    
+    <div class="content">
+        <div class="place-details">
+            <h2 id="place-title" style="color:#172d73; font-weight: bold;">Title</h2>
+            <div class="image-slider">
+                <div class="slides" id="image-slider">
+                    <!-- Images will be dynamically added here -->
+                </div>
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+                <p id="photo-attribution" style="color: #172d73; text-align: center;"></p> <!-- Attribution element -->
+            </div>
+            
+            <p class="description-box" id="place-description">Description</p>
+        </div>
+    </div>
+
+
+        <div class="options">
+            <!-- Options Section -->
+            <div class="option"><a href="../LocaleQuest_Hotel-main/weather-api/Weather/index.html"><img src="weather.jpg" alt="Weather"></a><p>Weather</p></div>
+            <div class="option"><a id="directions" href="https://www.google.com/maps/dir/?api=1" target="_blank"><img src="map.jpg" alt="Directions"></a><p>Directions</p></div>
+            <div class="option"><a id="traffic-info" href="#" target="_blank"><img src="traffic.png" alt="Traffic"></a><p>Traffic</p></div>
+            <div class="option"><a href="../LocaleQuest_Hotel-main/hotel.html"><img src="hotel.jpg" alt="Hotels"></a><p>Hotels</p></div>
+            <div class="option"><a href="../durga/transport.html"><img src="train.jpg" alt="Ticket Booking"></a><p>Ticket Booking</p></div>
+            <div class="option"><a href="../guide/APP/frontend/guide.html"><img src="guide.jpg" alt="Tourist Guide"></a><p>Tourist Guide</p></div>
+            <div class="option"><a href="#" onclick="navigateToEvents()"><img src="festivals.jpg" alt="Local Festivals"></a><p>Local Festivals</p></div>
+            <div class="container">
+                <div class="actions">
+                    <a href="#">
+                        <button id="prev-place">Previous Place</button>
+                    </a>
+                    <button class="add-to-wishlist" id="wishlist-add">Add to Wishlist</button>
+                    
+                    <a href="../payment/payment/public/index.html">
+                        <button class="book-now">Book Now</button>
+                    </a>
+                    <a href="#">
+                        <button id="next-place">Next Place</button>
+                    </a>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+   
+
+    <div class="chat-box-icon position-fixed bottom-0 end-0 p-3 bg-primary rounded-3 shadow-lg">
+        <a href="C:\Users\keerthana\Desktop\touristwebsite\chat_bot.html" class="text-decoration-none text-white d-flex flex-column align-items-center justify-content-center">
+            <i class="fas fa-comments fa-4x"></i> <!-- Icon size adjusted -->
+            <span class="mt-2 text-center">Chat Box</span> <!-- Chat box name -->
+        </a>
+    </div>
+      <!-- Footer Start -->
+    <div class="container-fluid footer py-3">
+      <div class="container">
+          <div class="row align-items-start">
+              <!-- Get In Touch Section -->
+              <div class="col-md-4">
+                  <div class="footer-item d-flex flex-column">
+                      <h4 class="text-white mb-3">Get In Touch</h4>
+                      <a href="#"><i class="fas fa-home me-2"></i> 123 Street, Tamil Nadu, India</a>
+                      <a href="#"><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                      <a href="#"><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                      <a href="#" class="mb-2"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                      <!-- <div class="d-flex align-items-center mt-2">
+                          <i class="fas fa-share fa-2x text-white me-2"></i>
+                          <a class="btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a class="btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                          <a class="btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                          <a class="btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                      </div> -->
+                  </div>
+              </div>
+              
+              <!-- Feedback & Reviews Section -->
+              <div class="col-md-8">
+                  <div class="footer-item d-flex flex-column">
+                      <h4 class="text-white mb-3">Feedback & Reviews</h4>
+                      <div class="feedback-reviews">
+                          <p class="text-white mb-1">March 2, 2024 <span class="ms-3">&#9733; &#9733; &#9733; &#9733; &#9734;</span></p>
+                          <p class="text-white mb-0">
+                              Navigating through this tourist website was a breeze, thanks to its multilingual support feature. Overall, this website is a game-changer for travelers seeking convenience, inclusivity, and reliability.
+                          </p>
+                          <!-- Add more reviews as needed -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+    
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright text-body py-3">
+      <div class="container">
+          <div class="row g-2 align-items-center">
+              <div class="col-md-6 text-center text-md-end" style="color: #fff;">
+                  <i class="fas fa-copyright me-2"></i>
+                  <a class="text-white" href="#">Your Site Name</a>, All rights reserved.
+              </div>
+              <div class="col-md-6 text-center text-md-start" style="color: #fff;">
+                  Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+              </div>
+          </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script>
+        let places = []; // Array to store all places data
+        let currentIndex = 0; // Variable to track the current place
+
+// Default query to display "adventure tourism" places on page load
+const defaultQuery = "wildlife+tourism";
+
+// Function to fetch data based on user input or default
+async function fetchPlaceData(query) {
+    const searchUrl = `https://google-map-places.p.rapidapi.com/maps/api/place/textsearch/json?query=${query}+in+india&location=20.5937,78.9629&radius=5000000`;
+    
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '932fa4f0edmsh7b4d092b3e3162ap195380jsn8f5c7045985e', 
+            'X-RapidAPI-Host': 'google-map-places.p.rapidapi.com'
+        }
+    };
+
+    try {
+        const response = await fetch(searchUrl, options);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        places = data.results; // Store the fetched places in the array
+
+        if (places && places.length > 0) {
+            currentIndex = 0; // Reset the current index
+            displayPlace(currentIndex); // Display the first place initially
+        } else {
+            console.error("No places found.");
+        }
+    } catch (err) {
+        console.error("Error fetching places: ", err);
+    }
+}
+
+// Function to display the place by its index
+async function displayPlace(index) {
+    const place = places[index];
+    const placeId = place.place_id;
+    
+    const placeDetailsUrl = `https://google-map-places.p.rapidapi.com/maps/api/place/details/json?place_id=${placeId}`;
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '932fa4f0edmsh7b4d092b3e3162ap195380jsn8f5c7045985e', 
+            'X-RapidAPI-Host': 'google-map-places.p.rapidapi.com'
+        }
+    };
+
+    try {
+        const accessKey = 'Xzp-cH2yEUVQCG0x5ljhmK8vN1hJtpbMCw-Zqlh5TKI'; // Your Unsplash Access Key
+        const response = await fetch(placeDetailsUrl, options);
+        const placeData = await response.json();
+        const title = placeData.result.name || "Title not available";
+        const description = placeData.result.formatted_address;
+        const photos = placeData.result.photos;
+
+        // Update title and description
+        document.getElementById("place-title").innerText = title;
+        document.getElementById("place-description").innerText = description;
+        //d=title;
+        // Clear previous images
+        const imageSlider = document.getElementById("image-slider");
+        imageSlider.innerHTML = ""; 
+        
+        
+        console.log(`${title}`);
+        fetch(`https://api.unsplash.com/search/photos?query=${title}&client_id=${accessKey}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const imagesContainer = document.getElementById('image-slider');
+                data.results.forEach(image => {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = image.urls.regular; // Change to 'full' or 'regular' for larger images
+                    imgElement.alt = image.description || 'Image from Unsplash'; // Add alt text
+                    imagesContainer.appendChild(imgElement);
+                });
+            })
+            .catch(error => console.error('Error fetching images:', error));
+    } catch (err) {
+        console.error(`Error fetching details for place_id ${placeId}: `, err);
+    }
+}
+
+// Event listener for the "Next Place" button
+document.getElementById("next-place").addEventListener("click", () => {
+    if (places.length > 0) {
+        currentIndex = (currentIndex + 1) % places.length; // Increment index and loop back if needed
+        displayPlace(currentIndex); // Display the next place
+    } else {
+        console.warn("No places to display.");
+    }
+});
+
+// Event listener for the "Previous Place" button
+document.getElementById("prev-place").addEventListener("click", () => {
+    if (places.length > 0) {
+        currentIndex = (currentIndex - 1 + places.length) % places.length; // Decrement index and loop back if needed
+        displayPlace(currentIndex); // Display the previous place
+    } else {
+        console.warn("No places to display.");
+    }
+});
+
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelectorAll("#image-slider img");
+            slides.forEach((slide, index) => {
+                slide.style.display = index === slideIndex ? "block" : "none"; // Show current slide
+            });
+        }
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % document.querySelectorAll("#image-slider img").length; // Loop back to first slide
+            showSlides();
+        }
+
+        function prevSlide() {
+            slideIndex = (slideIndex - 1 + document.querySelectorAll("#image-slider img").length) % document.querySelectorAll("#image-slider img").length; // Loop back to last slide
+            showSlides();
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            const directionsLink = document.getElementById('directions');
+            
+            // Event listener for clicking the directions link/button
+            directionsLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default anchor link behavior
+                
+                const destination = document.getElementById('place-title').textContent.trim(); // Fetch the destination from the h2 tag
+        
+                // Get user's current location
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+        
+                        // Create the Google Maps directions URL
+                        const directionsUrl = `https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${encodeURIComponent(destination)}`;
+        
+                        // Open the directions URL in a new tab
+                        window.open(directionsUrl, '_blank');
+                    }, function() {
+                        alert("Unable to retrieve your location.");
+                    });
+                } else {
+                    alert("Geolocation is not supported by your browser.");
+                }
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            const directionsLink = document.getElementById('traffic-info');
+            
+            // Event listener for clicking the directions link/button
+            directionsLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default anchor link behavior
+                
+                const destination = document.getElementById('place-title').textContent.trim(); // Fetch the destination from the h2 tag
+        
+        
+                // Get user's current location
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+        
+                        // Create the Google Maps directions URL
+                        const directionsUrl = `https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${encodeURIComponent(destination)}&layer=t`;
+        
+                        // Open the directions URL in a new tab
+                        window.open(directionsUrl, '_blank');
+                    }, function() {
+                        alert("Unable to retrieve your location.");
+                    });
+                } else {
+                    alert("Geolocation is not supported by your browser.");
+                }
+            });
+        });
+        
+    fetchPlaceData(defaultQuery);
+    document.getElementById("search-button").addEventListener("click", () => {
+        const query = document.getElementById("search-input").value.trim();
+        console.log(query);
+        if (query) {
+            fetchPlaceData(query); // Fetch data for the searched query
+        } else {
+            console.warn("Please enter a search query.");
+        }
+    });
+    function navigateToEvents() {
+    
+    const place = document.getElementById('place-title').textContent.trim();
+    console.log(place);
+    if (place) {
+        // Save the place in localStorage
+        localStorage.setItem('selectedPlace', place);
+        
+        // Navigate to the Events page
+        window.location.href = 'local.html';
+        console.log(place);
+    }
+    else
+    {
+        console.log("error2");
+    }
+}
+document.getElementById('wishlist-add').addEventListener('click', function() {
+    console.log("Hi");
+
+    const userToken = localStorage.getItem('token');  
+    const userid = localStorage.getItem("userid");
+    console.log("User ID:", userid);
+
+    if (!userToken) {
+        alert("You need to log in to add items to your wishlist.");
+        window.location.href = '../localeQuest/login.html';  
+        return;
+    }
+
+    // Get page details
+    const pageURL = window.location.href;
+    const pageTitle = document.getElementById('place-title').textContent.trim();
+    console.log(pageTitle);
+    const basePath = window.location.origin.includes("file://") 
+    ? "http://localhost:5510"  
+    : window.location.origin;
+
+const newURL = `${basePath}/wildlife.html?place=${encodeURIComponent(pageTitle)}`;
+console.log("🔹 Final URL:", newURL);
+
+
+    if (window.location.protocol !== "file:") {
+        window.history.pushState({ path: newURL }, '', newURL);
+    } else {
+        console.warn("pushState is blocked on file:// protocol. Run a local server.");
+    }
+
+    // ✅ Send data to the backend
+    fetch('http://localhost:5510/app/add', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            userId: userid,
+            url: newURL,
+            title: pageTitle,
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Item added to wishlist:', data);
+        alert('Item added to wishlist!');
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to add item to wishlist');
+    });
+});
+document.getElementById('logoutBtn').addEventListener('click', () => {
+    // Clear authentication data (localStorage or sessionStorage)
+    localStorage.removeItem('token')
+localStorage.removeItem('user')
+localStorage.removeItem('userid')
+    // Redirect to the home page
+    window.location.href = '../localeQuest/head.html';  // Replace with your home page file name or URL
+});
+
+</script>
+
+</body>
+</html>

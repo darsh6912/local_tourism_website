@@ -1,0 +1,159 @@
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    padding: 25px 15px;
+    color: black !important;
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    transition: .5s;
+    z-index: 1;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link.active {
+    background-color: #13357b;
+      color: #f9fafd !important;
+  }
+  
+  
+  
+  .navbar-light .navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #13357b;
+    z-index: -1;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover::after {
+    transform: translateY(0);
+  }
+  
+  
+  .navbar-light .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #13357b;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover::after {
+    transform: translateY(0);
+  }
+  
+  
+  .container-fluid .navbar
+  {
+   background-color: #ffffff;
+  } 
+  .nav-item:hover{
+   background-color: #13357b;
+   color:#fff;
+  }
+  .wishlist-btn:hover,
+  .btn:hover {
+    background-color: darkblue !important;
+    color: #fff !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-text-fill-color: #f8f9fa;
+}
+
+  #wishlist:hover,
+  #more_res:hover{
+   background-color: #fff;
+   color:#13357b;
+   font-weight:500;
+   border-color: #13357b;
+   border-width: 100%;
+  }
+  
+  
+  .footer {
+    background: var(--bs-dark);
+  }
+  .footer .footer-item a {
+    line-height: 30px;
+    color: var(--bs-white);
+    transition: 0.5s;
+    text-decoration: none !important;
+  }
+  
+  .footer .footer-item a:hover {
+    letter-spacing: 2px;
+    color: #13357b;
+  }
+  
+  .mx-1:hover{
+    background-color: #ffffff !important;
+    color:#13357b !important;
+  }
+  /* Footer End */
+  
+  /* copyright Start */
+  .copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--bs-dark) !important;
+  }
+  
+  .bg-primary {
+    --bs-bg-opacity: 1;
+    background-color:#13357b !important;
+  }
+  .btn-primary{
+    background-color: #13357b;
+    border-color: #13357b;
+  }
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.hotel-info h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.amenities {
+    margin-top: 20px;
+}
+
+.amenities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.amenities ul li {
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.availability-form {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}

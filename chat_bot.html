@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Page</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .chat-container {
+            width: 100%;
+            height: 100vh;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .chat-header {
+            background:  #13357c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .chat-body {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .chat-footer {
+            display: flex;
+            padding: 15px;
+            background: #e0e0e0;
+        }
+        .chat-footer input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .chat-footer button {
+            background:  #13357c;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .message {
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 75%;
+            word-wrap: break-word;
+        }
+        .user-message {
+            background:  #8bacf4;
+            align-self: flex-end;
+            text-align: right;
+        }
+        .bot-message {
+            background:  #a6c0f7;
+            align-self: flex-start;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">Chat with Us</div>
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-footer">
+            <input type="text" id="chatInput" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const chatBody = document.getElementById('chatBody');
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            if (message === '') return;
+            
+            const userMessage = `<div class='message user-message'><strong>You:</strong> ${message}</div>`;
+            chatBody.innerHTML += userMessage;
+            input.value = '';
+            chatBody.scrollTop = chatBody.scrollHeight;
+
+            setTimeout(() => {
+                const botResponse = getBotResponse(message);
+                const botMessage = `<div class='message bot-message'><strong>Bot:</strong> ${botResponse}</div>`;
+                chatBody.innerHTML += botMessage;
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }, 1000);
+        }
+
+        function getBotResponse(input) {
+    const responses = [
+    { "keywords": ["hello", "hi","Good morning","good evening","good afternoon"], "response": "Hi there! How can I assist you with your travel plans?" },
+    { "keywords": ["how are you"], "response": "I'm just a bot, but I'm here to help you plan your next trip!" },
+    
+    { "keywords": ["tour", "package"], "response": "We offer various tour packages. Please visit our website for details!" },
+    { "keywords": ["destination", "places to visit"], "response": "We have packages for Mumbai, Delhi, Ooty, and more! Where do you want to go?" },
+    { "keywords": ["best places", "top destinations"], "response": "Some of the top destinations include Ooty, Taj Mahal, Kashmir and more!" },
+    { "keywords": ["visa"], "response": "Visa requirements vary by country. Please check with the respective embassy or our travel experts!" },
+    { "keywords": ["currency", "exchange rate"], "response": "You can check real-time currency exchange rates on forex websites or at your local bank!" },
+    { "keywords": ["travel insurance"], "response": "Travel insurance covers medical emergencies, trip cancellations, and lost baggage. We recommend getting one!" },
+    { "keywords": ["cheap", "budget"], "response": "Consider booking hotels in advance, and  travel during off-peak seasons!" },
+    { "keywords": ["transport", "local travel"], "response": "Most cities have taxis, buses, and metro systems. Some places also offer bike rentals!" },
+    { "keywords": ["food", "cuisine"], "response": "Try local delicacies like coffee in kumbakonam, chocolate in Ooty, and street food in Chennai!" },
+    { "keywords": ["adventure", "activities"], "response": "For adventure lovers, we recommend climbing Himalayas,bunjee jumping in rishikesh !" },
+    {"keywords":["suggest","recommand","which"],"response":"We are providing more amazing offers , please visit website where you will find all the needed information"},
+    { "keywords": ["book", "reservation"], "response": "You can book hotels,bus,cars,trains and tour packages directly on our website!" },
+    { "keywords": ["hotel", "stay"], "response": "We offer a variety of accommodations, from budget stays to luxury resorts. Where would you like to stay?" },
+    { "keywords": ["flight", "airfare"], "response": "We provide competitive flight prices. Search for flights on our website for the best deals!" },
+    { "keywords": ["car rental", "vehicle"], "response": "Need a car for your trip? We offer car rentals at affordable rates!" },
+    { "keywords": ["train tickets"], "response": "You can book train tickets for various destinations through our website!" },
+    { "keywords": ["bus booking"], "response": "Looking for a bus ride? We provide bus booking services for multiple destinations!" },
+    { "keywords": ["cruise", "boat trip"], "response": "Explore our cruise packages for an unforgettable journey on the sea!" },
+    { "keywords": ["honeymoon", "romantic getaway"], "response": "We have exclusive honeymoon packages in the Maldives, Santorini, and more!" },
+    { "keywords": ["family", "kids"], "response": "Check out our family-friendly travel destinations with fun activities for kids!" },
+    { "keywords": ["solo travel"], "response": "We offer safe and exciting solo travel packages! Need recommendations?" },
+    { "keywords": ["group travel"], "response": "Planning a group trip? We have special discounts for group bookings!" },
+    { "keywords": ["business travel", "corporate"], "response": "We provide customized corporate travel solutions. Contact us for details!" },
+    
+    { "keywords": ["cancellation", "refund"], "response": "Our cancellation and refund policies vary by booking. Please check the terms before canceling!" },
+    { "keywords": ["weather", "climate"], "response": "Check the weather forecast before your trip to pack accordingly!" },
+    { "keywords": ["luggage", "baggage"], "response": "Make sure to check airline baggage policies to avoid extra charges!" },
+    { "keywords": ["festivals", "events"], "response": "Want to experience local culture? Check out festivals happening at your destination!" },
+    { "keywords": ["safety", "travel tips"], "response": "Always keep your documents safe, avoid unsafe areas, and stay informed about local guidelines." },
+    { "keywords": ["best time to visit"], "response": "Each destination has its best travel season. Tell me where you're going, and I'll suggest the best time to visit!" },
+    { "keywords": ["local laws", "travel restrictions"], "response": "Different countries have different travel restrictions and laws. Check the official tourism website for details." },
+    { "keywords": ["emergency", "help"], "response": "For travel emergencies, contact local authorities or your country's embassy." },
+    { "keywords": ["language", "communication"], "response": "Learning a few local phrases can be helpful! Would you like recommendations for language translation apps?" },
+    { "keywords": ["shopping", "souvenirs"], "response": "Some great shopping destinations include Dubai, Paris, Bangkok, and New York. Looking for local markets?" },
+    { "keywords": ["hidden gems", "offbeat destinations"], "response": "Want to explore lesser-known spots? We have offbeat travel recommendations just for you!" },
+
+    { "keywords": ["discounts", "offers"], "response": "We have seasonal discounts and exclusive deals. Visit our website for the latest offers!" },
+    { "keywords": ["best airlines", "flight deals"], "response": "Some of the best airlines include Emirates, Singapore Airlines, and Qatar Airways. Check our website for deals!" },
+    { "keywords": ["luxury travel"], "response": "Experience luxury with our premium travel packages, including private villas, first-class flights, and more!" },
+    { "keywords": ["travel accessories"], "response": "Make sure to carry travel essentials like power banks, adapters, and travel pillows for a comfortable journey." },
+    { "keywords": ["beaches", "island trips"], "response": "Looking for a beach getaway? Check out the Maldives, Seychelles, and Hawaii!" },
+    { "keywords": ["mountains", "trekking"], "response": "Love trekking? Explore the Himalayas, the Swiss Alps, and Patagonia!" },
+    { "keywords": ["wildlife safari"], "response": "Experience wildlife up close with safaris in Africa, India, and Australia!" },
+    { "keywords": ["road trip"], "response": "Road trips are a great way to explore! Do you need recommendations for scenic routes?" },
+    { "keywords": ["medical travel"], "response": "Need medical assistance while traveling? We can help you find medical tourism services." },
+    { "keywords": ["workation", "remote work"], "response": "Work and travel at the same time! We have recommendations for digital nomad-friendly destinations." },
+
+    { "keywords": ["customer support", "help"], "response": "Our customer support team is available 24/7. How can we assist you?" },
+    { "keywords": ["live chat", "contact"], "response": "You can reach us via live chat, email, or phone. Check our website for contact details." },
+    { "keywords": ["blog", "travel stories"], "response": "Read travel blogs and experiences shared by travelers on our website!" },
+    { "keywords": ["reviews", "testimonials"], "response": "Check out reviews from our happy travelers before booking your trip!" },
+    { "keywords": ["gift card", "travel voucher"], "response": "Looking for a travel gift? We offer travel vouchers for your loved ones!" },
+    {"keywords":["thank you","nice","Good","ok"],"response":"Welcome, Feel free for futher assistance"},
+    { "keywords": ["hello", "hi","Good morning","good evening","good afternoon"], "response": "Hi there! How can I assist you with your travel plans?" },
+    { "keywords": ["how are you"], "response": "I'm just a bot, but I'm here to help you plan your next trip!" },
+    
+    { "keywords": ["bye", "goodbye"], "response": "Goodbye! Have a great journey!" }
+];
+
+    
+input = input.toLowerCase();
+for (let item of responses) {
+    if (item.keywords.some(keyword => new RegExp(`\\b${keyword}\\b`, 'i').test(input))) {
+        return item.response;
+    }
+}
+return "I'm not sure about that. Can you rephrase?";
+
+
+        }
+    </script>
+</body>
+</html>

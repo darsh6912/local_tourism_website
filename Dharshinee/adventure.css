@@ -1,0 +1,362 @@
+/* General Reset */
+.row gx-0{
+    padding: 10px 20px; /* Padding inside the button */
+    margin: 0 10px; /* Margin between buttons */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    color: #ffffff; /* Text color (white) */
+     /* Button background color (blue) */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style on hover */
+    }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  #search-input[type="text"] {
+    padding: 6px;
+    margin-right: 10px;
+    margin-left: 1cm;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    font-size: 17px;
+    border-radius: 4px;
+  }
+  
+  #search-button {
+    padding: 6px 10px;
+    background: white;
+    color: green !important;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  #search-button i {
+    font-size: 18px;
+  }
+  
+  #search-button:hover {
+    background: rgb(39, 11, 137);
+    color: white;
+  }
+  
+  .header_section .col-lg-4,
+  .header_section .col-lg-8
+  {
+    background-color: #13357c; /* Background color */
+    color: #fff; /* Text color */
+    padding: 5px 0; /* Padding around the content */
+  }
+  .header_section .col-lg-4 a {
+    color: #fff; /* Link text color */
+    text-decoration: none !important;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    padding: 25px 15px;
+    color: black !important;
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    transition: .5s;
+    z-index: 1;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link.active {
+    background-color: #13357c;
+      color: #f9fafd !important;
+  }
+  
+  
+  
+  .navbar-light .navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #13357c;
+    z-index: -1;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover::after {
+    transform: translateY(0);
+  }
+  
+  
+  .navbar-light .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #13357c;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover::after {
+    transform: translateY(0);
+  }
+  
+  
+  .container-fluid .navbar
+  {
+   background-color: #ffffff;
+  } 
+  .nav-item:hover{
+   background-color: #13357c;
+   color:#fff;
+  }
+  .btn-primary{
+    background-color: #13357c;
+    border-color: #13357c;
+  }
+  #wishlist:hover{
+   background-color: #fff;
+   color:#13357c;
+   font-weight:500;
+   border-color: #13357c;
+   border-width: 100%;
+  }
+  
+  
+  .footer {
+    background: var(--bs-dark);
+  }
+  .footer .footer-item a {
+    line-height: 30px;
+    color: var(--bs-white);
+    transition: 0.5s;
+    text-decoration: none !important;
+  }
+  
+  .footer .footer-item a:hover {
+    letter-spacing: 2px;
+    color: #13357c;
+  }
+  
+  .mx-1:hover{
+    background-color: #ffffff !important;
+    color:#13357c !important;
+  }
+  /* Footer End */
+  
+  /* copyright Start */
+  .copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--bs-dark) !important;
+  }
+  
+  .bg-primary {
+    --bs-bg-opacity: 1;
+    background-color:#13357c !important;
+  }
+
+  
+
+
+.content {
+    padding: 20px;
+    background-color: #f5f5f5; /* Light Gray */
+    padding: 20px;
+    color: #333; /* Dark Gray for text */
+}
+
+/* adventure.css */
+
+/* adventure.css */
+
+/* Basic styling for buttons */
+button {
+    
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+
+/* Hover effect for buttons */
+.add-to-wishlist:hover,
+.book-now:hover,
+#next-place:hover,
+#prev-place:hover{
+    background-color:#13357c;
+    color:white;
+}
+
+.content{
+  background-color: #efeffa;
+}
+
+.description-box {
+  border: 1px solid #ddd; /* Light grey border */
+  padding: 15px; /* Space inside the box */
+  margin: 15px 0; /* Space above and below the box */
+  background-color: #f9f9f9; /* Light grey background */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.description-box:hover {
+  background-color: #13357c; /* Blue background color on hover */
+  color: #fff; /* White text color on hover */
+}
+
+/* style.css */
+.image-slider {
+  position: relative;
+  max-width: 750px; /* Desired width */
+  height: 500px;    /* Desired height */
+  margin: auto;
+  overflow: hidden;
+  background-color: #f0f0f0; /* Optional background for testing */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%; /* Adjust this based on number of slides */
+}
+
+.slides img {
+  width: 100%; /* Each image will take full width of the container */
+  height: 100%; /* Images will take full height */
+  object-fit: cover; /* Ensures the image covers the container without stretching */
+}
+
+
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 18px;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+
+.place-details {
+    color:#090909;
+    font-size:25px;
+}
+
+.place-details h2 {
+    margin-top: 0;
+}
+
+.place-details img {
+    max-width:80%;
+    height:auto;
+    align-items:center;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.option {
+    text-align: center;
+    width: 25%; /* Two items in a row with a small gap */
+    margin-bottom: 10px; /* Add space between rows */
+}
+
+.option img {
+    width: 200px;
+    height: 200px;
+}
+
+.option img:hover {
+    transform: scale(1.1); /* Zoom in on hover */
+}
+
+.option p {
+    margin-top: 5px;
+    font-size:25px;
+    color:black;
+}
+
+
+
+.option::before {
+    content: ''; /* Empty content */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: blue;*/
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+    z-index: -1; /* Place behind the image */
+}
+
+.option:hover::before {
+    opacity: 1; /* Show background color on hover */
+}
+
+.option:hover img {
+    transform: scale(1.1); /* Zoom in on hover */
+}
+
+
+.actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.actions button {
+    padding: 20px 50px;
+    margin: 0 10px;
+    background-color:white; 
+    color: #1d1b1b;
+    border: none;
+    border-radius: 25px;
+    font-size:25px;
+}
+
+/* adventure.css */
+
+

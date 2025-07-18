@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Bus Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="bus.css"> <!-- Link to external CSS file -->
+    <style>   
+        /* Custom styles for the header */
+        .header_section .col-lg-4,
+        .header_section .col-lg-8
+        {
+            background-color: #13357c; /* Background color */
+            color: #fff; /* Text color */
+            padding: 5px 0; /* Padding around the content */
+        }
+        .header_section .col-lg-4 a {
+            color: #fff; /* Link text color */
+            text-decoration: none !important;
+        }
+    </style>
+</head>
+<body>
+         <!-- header section strats -->
+    <header class="header_section">
+        <!-- Topbar Start -->
+        <div class="container-fluid.bg-primary.px-5.d-none.d-lg-block">
+          <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0 ms-0">
+                  <div class="d-inline-flex align-items-center" style="height: 45px;">
+                      <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                      <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                      <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                      <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                      <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                  </div>
+            </div> 
+              
+              <div class="col-lg-4 text-center text-lg-end">
+                  <div class="d-inline-flex align-items-center" style="height: 45px;">
+                      <a href="#"><small class="me-3 text-light"><i class="fa fa-language me-2"></i>Languages</small></a>
+                      <a href="#"><small class="me-3 text-light"><i class="fa fa-volume-up me-2"></i>Audio Guide</small></a>
+                      <a href="#"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Login</small></a>
+                      
+                  </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <h1 class="m-0" style="color:#13357c"><i class="fa fa-map-marker-alt me-3" style="color:#13357c"></i>LocaleQuest</h1>
+             
+                <!-- <img src="img/logo.png" alt="Logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="../localeQuest/head.html" class="nav-item nav-link">Home</a>
+                    <a href="../localeQuest/head.html" class="nav-item nav-link">About</a>
+                    <a href="#front.html" class="nav-item nav-link active">transport</a>
+                    <a href="../localeQuest/head.html" class="nav-item nav-link">Gallery</a>
+                    <!-- <a href="contact.html" class="nav-item nav-link">Profile</a> -->
+                </div>
+                <a href="" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4" id="wishlist">Wishlist</a>
+            </div>
+        </nav>
+      </div>
+      <!-- Topbar End -->
+      </header>
+
+<!-- Subheader Section -->
+<div class="container-fluid bg-light py-3">
+    <div class="container text-center">
+        <h2 class="display-4">Book a Bus</h2>
+        <p class="lead">Choose your preferred bus, travel dates, and get ready for your journey.</p>
+    </div>
+</div>
+
+
+    <div class="container1">
+        <!-- <h1 class="text-center my-4">Book a Bus</h1> -->
+
+        <div class="search-bar1 mb-4">
+            <input type="text" id="search" placeholder="Search..." class="search-input">
+            <img src="mike.jpg" alt="Search" class="search-icon">
+        </div>
+
+        <div class="bus-details">
+            <h2>Available Buses</h2>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Bus Number</th>
+                        <th>Departure Place</th>
+                        <th>Destination</th>
+                        <th>Starting Time</th>
+                        <th>Duration</th>
+                        <th>Cost</th>
+                        <th>Ratings</th>
+                        <th>Select</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bus 101</td>
+                        <td>Mumbai</td>
+                        <td>Goa</td>
+                        <td>8:00 AM</td>
+                        <td>6 hours</td>
+                        <td>₹500</td>
+                        <td>4.5</td>
+                        <td><input type="checkbox" name="bus-select" value="Bus 101"></td>
+                    </tr>
+                    <tr>
+                        <td>Bus 102</td>
+                        <td>Delhi</td>
+                        <td>Jaipur</td>
+                        <td>9:30 AM</td>
+                        <td>5 hours</td>
+                        <td>₹400</td>
+                        <td>4.2</td>
+                        <td><input type="checkbox" name="bus-select" value="Bus 102"></td>
+                    </tr>
+                    <!-- Add more bus details here -->
+                </tbody>
+            </table>
+        </div>
+        <!-- Booking Form Section -->
+<div class="container mt-4">
+    <h1 class="text-center">Bus Booking Form</h1>
+    <div class="form-container">
+        <!-- Form Section -->
+        <div class="form-section">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="bus-number">Bus Number:</label>
+                <select id="bus-number" name="bus-number" required class="form-select">
+                    <option value="">Select Bus Number</option>
+                    <option value="Bus 101">Bus 101</option>
+                    <option value="Bus 102">Bus 102</option>
+                    <!-- Add more bus numbers as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="departure">Departure location:</label>
+                <input type="text" id="departure" name="departure" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination location:</label>
+                <input type="text" id="destination" name="destination" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="date">Date of Travel:</label>
+                <input type="date" id="date" name="date" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="tickets">Number of Tickets:</label>
+                <input type="number" id="tickets" name="tickets" min="1" required class="form-control">
+            </div>
+            <div class="form-group text-center mt-4">
+                <input type="button" value="Book Now" class="btn btn-primary" onclick="alert('Form submission is disabled in this demo.')">
+            </div>
+        </div>
+
+        <!-- Image Section -->
+        <div class="image-section">
+            <img src="bus.png" alt="Bus Image">
+        </div>
+    </div>
+</div>
+
+    
+<div class="chat-box-icon position-fixed bottom-0 end-0 p-3 bg-primary rounded-3 shadow-lg">
+    <a href="#" class="text-decoration-none text-white d-flex flex-column align-items-center justify-content-center">
+        <i class="fas fa-comments fa-4x"></i> <!-- Icon size adjusted -->
+        <span class="mt-2 text-center">Chat Box</span> <!-- Chat box name -->
+    </a>
+</div>
+  <!-- Footer Start -->
+<div class="container-fluid footer py-3">
+  <div class="container">
+      <div class="row align-items-start">
+          <!-- Get In Touch Section -->
+          <div class="col-md-4">
+              <div class="footer-item d-flex flex-column">
+                  <h4 class="text-white mb-3">Get In Touch</h4>
+                  <a href="#"><i class="fas fa-home me-2"></i> 123 Street, Tamil Nadu, India</a>
+                  <a href="#"><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                  <a href="#"><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                  <a href="#" class="mb-2"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                  <div class="d-flex align-items-center mt-2">
+                      <i class="fas fa-share fa-2x text-white me-2"></i>
+                      <a class="btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a class="btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                      <a class="btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                      <a class="btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Feedback & Reviews Section -->
+          <div class="col-md-8">
+              <div class="footer-item d-flex flex-column">
+                  <h4 class="text-white mb-3">Feedback & Reviews</h4>
+                  <div class="feedback-reviews">
+                      <p class="text-white mb-1">March 2, 2024 <span class="ms-3">&#9733; &#9733; &#9733; &#9733; &#9734;</span></p>
+                      <p class="text-white mb-0">
+                          Navigating through this tourist website was a breeze, thanks to its multilingual support feature. The audio guide feature was another highlight, providing insightful commentary and enhancing accessibility for users like me. Overall, this website is a game-changer for travelers seeking convenience, inclusivity, and reliability.
+                      </p>
+                      <!-- Add more reviews as needed -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+<!-- Copyright Start -->
+<div class="container-fluid copyright text-body py-3">
+  <div class="container">
+      <div class="row g-2 align-items-center">
+          <div class="col-md-6 text-center text-md-end" style="color: #fff;">
+              <i class="fas fa-copyright me-2"></i>
+              <a class="text-white" href="#">Your Site Name</a>, All rights reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-start" style="color: #fff;">
+              Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Copyright End -->
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script src="main.js"></script> <!-- Your custom JavaScript file -->
+</body>
+</html>

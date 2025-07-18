@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Website</title>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en', includedLanguages: 'en,es,fr,de,hi,zh-CN,ja,ru,it,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <style>
+        .translate-icon-container 
+        {
+            position: relative;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        #translate-icon {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #translate-icon:hover {
+            background-color: #0056b3;
+        }
+
+        #google_translate_element {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="translate-icon-container">
+        <!-- Language Selector Icon -->
+        <button id="translate-icon" onclick="showTranslateOptions()">
+            🌐 Translate
+        </button>
+        <!-- Google Translate Element -->
+        <div id="google_translate_element" style="display: none;"></div>
+    </div>
+
+    <!-- JavaScript Function -->
+    <script>
+        function showTranslateOptions() {
+            var translateElement = document.getElementById('google_translate_element');
+            if (translateElement.style.display === 'none' || translateElement.style.display === '') {
+                translateElement.style.display = 'block';
+            } else {
+                translateElement.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

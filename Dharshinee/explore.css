@@ -1,0 +1,191 @@
+/* General Reset */
+.row gx-0{
+  padding: 10px 20px; /* Padding inside the button */
+  margin: 0 10px; /* Margin between buttons */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
+  color: #ffffff; /* Text color (white) */
+   /* Button background color (blue) */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style on hover */
+  }
+  
+body, h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header_section .col-lg-4,
+.header_section .col-lg-8
+{
+  background-color: #13357c; /* Background color */
+  color: #fff; /* Text color */
+  padding: 5px 0; /* Padding around the content */
+}
+.header_section .col-lg-4 a {
+  color: #fff; /* Link text color */
+  text-decoration: none !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  padding: 25px 15px;
+  color: black !important;
+  overflow: hidden;
+  font-size: 17px;
+  font-weight: 400;
+  outline: none;
+  transition: .5s;
+  z-index: 1;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  background-color: #13357c;
+    color: #f9fafd !important;
+}
+
+
+
+.navbar-light .navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #13357c;
+  z-index: -1;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::after {
+  transform: translateY(0);
+}
+
+
+.navbar-light .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #13357c;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::after {
+  transform: translateY(0);
+}
+
+
+.container-fluid .navbar
+{
+ background-color: #ffffff;
+} 
+.nav-item:hover{
+ background-color: #13357c;
+ color:#fff;
+}
+.btn-primary{
+  background-color: #13357c;
+  border-color: #13357c;
+}
+#wishlist:hover{
+ background-color: #fff;
+ color:#13357c;
+ font-weight:500;
+ border-color: #13357c;
+ border-width: 100%;
+}
+
+
+.footer {
+  background: var(--bs-dark);
+}
+.footer .footer-item a {
+  line-height: 30px;
+  color: var(--bs-white);
+  transition: 0.5s;
+  text-decoration: none !important;
+}
+
+.footer .footer-item a:hover {
+  letter-spacing: 2px;
+  color: #13357c;
+}
+
+.mx-1:hover{
+  background-color: #ffffff !important;
+  color:#13357c !important;
+}
+/* Footer End */
+
+/* copyright Start */
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bs-dark) !important;
+}
+
+.bg-primary {
+  --bs-bg-opacity: 1;
+  background-color:#13357c !important;
+}
+/* Categories Section */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: #efeffa;
+}
+
+.category {
+  text-align: center;
+  width: 30%;
+  margin-bottom: 20px;
+  overflow: hidden; /* Ensures zoom effect is contained within the element */
+  position: relative; /* To position the text above the image */
+}
+
+.category img {
+  width: 100%;
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensures the image covers the entire area without distorting aspect ratio */
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+}
+
+.category h2 {
+  color: #0e1e50; /* Dark Blue */
+  margin-top: 10px;
+  font-size: 18px;
+  position: absolute; /* Position text over the image */
+  bottom: 10px; /* Place the text at the bottom of the image */
+  left: 0;
+  right: 0;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.974); /* Semi-transparent background for better readability */
+  border-radius: 0 0 10px 10px;
+}
+
+.category img:hover {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
+.category a:hover h2 {
+  color: #0e1e50; /* Pink on hover */
+}

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  
+  <title>Restaurant</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+    }
+    #google_translate_element {
+        margin-bottom: 20px;
+    }
+     /* Hide the Google Translate banner */
+
+     .btn-light {
+background-color: #13357c !important; /* Button fill color */
+color: white !important; /* Text color */
+border: none !important; /* Remove border */
+box-shadow: none !important; /* Remove any shadow */
+padding: 5px 10px; /* Adjust padding */
+margin: 0; /* Remove extra space */
+}
+
+     
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+/* Hide the Google Translate logo and "Powered by Google" text */
+.goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-gadget span {
+    display: none !important;
+}
+
+/* Hide the Google Translate dropdown default styling */
+.goog-te-gadget {
+    font-size: 0px !important;
+}
+
+/* Style the language dropdown to make it visible */
+.goog-te-gadget select {
+    font-size: 16px !important;
+    padding: 5px;
+}
+/* Hide the Google Translate top bar */
+body > .skiptranslate {
+    display: none !important;
+}
+
+/* Prevent extra space from appearing */
+body {
+    top: 0px !important;
+}
+</style>
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+  
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+  <!-- Customized Bootstrap Stylesheet -->
+  
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>   
+      /* Custom styles for the header */
+      .header_section .col-lg-4,
+      .header_section .col-lg-8
+      {
+          background-color: #30446f; /* Background color */
+          color: #fff; /* Text color */
+          padding: 5px 0; /* Padding around the content */
+      }
+      .header_section .col-lg-4 a {
+          color: #fff; /* Link text color */
+          text-decoration: none !important;
+      }
+       /* Custom styles for the restaurant list */
+    #restaurant-list {
+      margin: 20px;
+    }
+
+    .restaurant-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .restaurant-item:last-child {
+      border-bottom: none;
+    }
+
+    .restaurant-image {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .restaurant-info {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    .restaurant-info h3 {
+      font-size: 1.5em;
+    }
+
+    .restaurant-info p {
+      margin: 5px 0;
+    }
+
+    .restaurant-info .rating,
+    .restaurant-info .price-range {
+      font-weight: bold;
+    }
+
+    /* Styling for the separator */
+    .separator {
+      height: 2px;
+      background-color: #ddd;
+      margin: 20px 0;
+    }
+
+    .star {
+    color: lightgray; /* Default color for unfilled stars */
+    font-size: 30px;  /* Make stars bigger */
+    font-weight: bold; /* Make stars bold */
+    margin-right: 5px; /* Add some space between stars */
+}
+
+.star.filled {
+    color: gold; /* Bright yellow for filled stars */
+}
+  </style>
+</head>
+
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <!-- Topbar Start -->
+      <div class="container-fluid.bg-primary.px-5.d-none.d-lg-block">
+        <div class="row gx-0">
+          <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0 ms-0">
+                <!-- <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                </div> -->
+          </div> 
+            
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                  <div class="language-container" style="position: relative; display: inline-block;">
+                    <button onclick="toggleTranslate()" class="btn btn-light" >
+                        <i class="fa fa-language me-2"></i> Languages
+                    </button>
+                <!-- Google Translate Widget -->
+                <div id="translate-container" style="
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background: white;
+                    padding: 10px;
+                    border-radius: 5px;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                    z-index: 1000;
+                ">
+            <div id="google_translate_element"></div>
+            </div>
+            </div>
+
+            <script>
+                function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    { pageLanguage: 'en', includedLanguages: 'en,hi,ta' }, 
+                    'google_translate_element'
+                );
+            }
+
+            function toggleTranslate() {
+                var translateDiv = document.getElementById("translate-container");
+                translateDiv.style.display = (translateDiv.style.display === "none" || translateDiv.style.display === "") ? "block" : "none";
+            }
+
+            // Close dropdown only if clicking outside
+            document.addEventListener("click", function(event) {
+            var container = document.querySelector(".language-container");
+            var translateDiv = document.getElementById("translate-container");
+            if (!container.contains(event.target)) {
+                translateDiv.style.display = "none";
+            }
+            });
+            </script>
+
+            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    <!-- <a href="#"><small class="me-3 text-light"><i class="fa fa-volume-up me-2"></i>Audio Guide</small></a> -->
+                    <a id="logoutBtn" ><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Logout</small></a>
+                    
+                </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid position-relative p-0">
+      <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+          <a href="" class="navbar-brand p-0">
+              <h1 class="m-0" style="color:#13357c"><i class="fa fa-map-marker-alt me-3" style="color:#13357c"></i>LocaleQuest</h1>
+           
+              <!-- <img src="img/logo.png" alt="Logo"> -->
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+              <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+              <div class="navbar-nav ms-auto py-0">
+                  <a href="../localeQuest/head.html" class="nav-item nav-link">Home</a>
+                  <a href="../localeQuest/head.html" class="nav-item nav-link">About</a>
+                  <a href="#front.html" class="nav-item nav-link active">Restaurants</a>
+                  <a href="../localeQuest/head.html" class="nav-item nav-link">Gallery</a>
+                  <!-- <a href="contact.html" class="nav-item nav-link">Profile</a> -->
+              </div>
+              <a href="../Dharshinee/wishlist.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4" id="wishlist">Wishlist</a>
+          </div>
+          <div>
+            <form id="search-form" action="#" method="get">
+              <input id="search-input" type="text" placeholder="Search for restaurants" name="search">
+              <button id="search-button" type="submit"> <!-- Changed to type="submit" for form submission -->
+                  <i class="fa fa-search"></i>
+              </button>
+          </form> 
+        </div>
+      </nav>
+    </div>
+    <!-- Topbar End -->
+    </header>
+
+  <div id="restaurant-list"></div>
+
+  <script>
+    fetch('https://tripadvisor-scraper.p.rapidapi.com/restaurants/list?query=goa&page=1', {
+      method: 'GET',
+      headers: {
+        'x-rapidapi-host': 'tripadvisor-scraper.p.rapidapi.com',
+        'x-rapidapi-key': '7e5bb1db75mshc4d3ae465c853b8p162369jsn092c72c6f6cb'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      const restaurants = data.results;
+      let html = '';
+      restaurants.forEach(restaurant => {
+        html += `
+          <div class="restaurant-item">
+            <img class="restaurant-image" src="${restaurant.featured_image}" alt="${restaurant.name}">
+            <div class="restaurant-info">
+              <h2 style="color:#13357c">${restaurant.name}</h2>
+              <p><strong>Location: </strong> Goa</p>
+              <p><strong>Latitude: </strong> ${restaurant.latitude} </p>
+              <p><strong>Cuisines:</strong> ${restaurant.cuisines}</p>
+              <a href="${restaurant.link} target="_blank"> ${restaurant.name} </a>
+              <p><strong>Rating:</strong> 
+                ${generateStars(restaurant.rating)}
+             </p>
+              <p style="color:black"> <strong>Reviews:</strong> ${restaurant.reviews}</p>
+            </div>
+          </div>
+          <div class="separator"></div>
+        `;
+      });
+      document.getElementById('restaurant-list').innerHTML = html;
+    })
+    .catch(error => console.error('Error:', error));
+
+    function generateStars(rating) {
+    let filledStars = Math.floor(rating);  // Number of filled stars
+    let halfStar = (rating % 1 !== 0); // Check if there is a half star
+    let stars = '';
+
+    // Add full stars
+    for (let i = 0; i < filledStars; i++) {
+        stars += '<span class="star filled">&#9733;</span>'; // Filled star
+    }
+
+    // Add half star
+    if (halfStar) {
+        stars += '<span class="star">&#9733;</span>'; // Half-filled star
+    }
+
+    // Add empty stars
+    for (let i = filledStars + (halfStar ? 1 : 0); i < 5; i++) {
+        stars += '<span class="star">&#9734;</span>'; // Empty star
+    }
+
+    return stars;
+}
+document.getElementById('search-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const searchQuery = document.getElementById('search-input').value.trim();
+    if (searchQuery) {
+        const googleMapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(searchQuery)}`;
+        window.open(googleMapsUrl, '_blank');
+    }
+});
+
+  </script>
+
+
+
+<div class="chat-box-icon position-fixed bottom-0 end-0 p-3 bg-primary rounded-3 shadow-lg">
+    <a href="C:\Users\keerthana\Desktop\touristwebsite\chat_bot.html" class="text-decoration-none text-white d-flex flex-column align-items-center justify-content-center">
+        <i class="fas fa-comments fa-4x"></i> <!-- Icon size adjusted -->
+        <span class="mt-2 text-center">Chat Box</span> <!-- Chat box name -->
+    </a>
+</div>
+  <!-- Footer Start -->
+<div class="container-fluid footer py-3">
+  <div class="container">
+      <div class="row align-items-start">
+          <!-- Get In Touch Section -->
+          <div class="col-md-4">
+              <div class="footer-item d-flex flex-column">
+                  <h4 class="text-white mb-3">Get In Touch</h4>
+                  <a href="#"><i class="fas fa-home me-2"></i> 123 Street, Tamil Nadu, India</a>
+                  <a href="#"><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                  <a href="#"><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                  <a href="#" class="mb-2"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                  <!-- <div class="d-flex align-items-center mt-2">
+                      <i class="fas fa-share fa-2x text-white me-2"></i>
+                      <a class="btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a class="btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                      <a class="btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                      <a class="btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div> -->
+              </div>
+          </div>
+          
+          <!-- Feedback & Reviews Section -->
+          <div class="col-md-8">
+              <div class="footer-item d-flex flex-column">
+                  <h4 class="text-white mb-3">Feedback & Reviews</h4>
+                  <div class="feedback-reviews">
+                      <p class="text-white mb-1">March 2, 2024 <span class="ms-3">&#9733; &#9733; &#9733; &#9733; &#9734;</span></p>
+                      <p class="text-white mb-0">
+                          Navigating through this tourist website was a breeze, thanks to its multilingual support feature. Overall, this website is a game-changer for travelers seeking convenience, inclusivity, and reliability.
+                      </p>
+                      <!-- Add more reviews as needed -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+<!-- Copyright Start -->
+<div class="container-fluid copyright text-body py-3">
+  <div class="container">
+      <div class="row g-2 align-items-center">
+          <div class="col-md-6 text-center text-md-end" style="color: #fff;">
+              <i class="fas fa-copyright me-2"></i>
+              <a class="text-white" href="#">Your Site Name</a>, All rights reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-start" style="color: #fff;">
+              Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Copyright End -->
+
+
+</body>
+</html>

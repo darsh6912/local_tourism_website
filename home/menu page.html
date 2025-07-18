@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Menu</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('tourism-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color:  #13357c;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .menu-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .menu-item:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transform: scale(1.02);
+        }
+        .menu-item h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .menu-item p {
+            margin-bottom: 0;
+            color: #666;
+        }
+        .menu-item i {
+            color: #13357c;
+        }
+        footer {
+            background-color: #13357c;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <link 
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    />
+</head>
+<body>
+    <header>
+        <h1>Local Tourism Portal</h1>
+    </header>
+    <div class="container">
+        <div class="menu-item">
+            <h2><i class="fa-solid fa-user"></i>&nbsp;&nbsp;&nbsp;Account Details</h2>
+            <p>Manage your personal details and view your tourism preferences.</p>
+        </div>
+        <div class="menu-item">
+            <h2><i class="fa-solid fa-signature"></i>&nbsp;&nbsp;&nbsp;Booking Details</h2>
+            <p>Check and manage your booked trips, local tours, and events.</p>
+        </div>
+        <div class="menu-item">
+            <h2><i class="fa-brands fa-rocketchat"></i>&nbsp;&nbsp;&nbsp;Chat with Guides</h2>
+            <p>Instantly chat with local tourist guides and get real-time assistance.</p>
+        </div>
+        <div class="menu-item">
+            <h2><i class="fa-solid fa-bell"></i>&nbsp;&nbsp;&nbsp;Notifications</h2>
+            <p>Stay updated with the latest events, discounts, and local offers.</p>
+        </div>
+        <div class="menu-item">
+            <h2><i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;&nbsp;Log Out</h2>
+        </div>
+        <!-- Add more menu items as needed -->
+    </div>
+    <footer>
+        <p>&copy; 2024 Local Tourism Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>
